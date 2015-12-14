@@ -47,14 +47,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClickButton(View view){
-        //test
-        //åbner appen hvis du klikker på notifikationer
+        //(MainActivity.class) - åbner appen hvis du klikker på notifikationer
         Intent intent = new Intent(this,MainActivity.class);
         //Intent intent = new Intent();
 
         PendingIntent pendingIntent = PendingIntent.getActivity(this,0,intent,0);
 
-
+        //setSmallIcon skal være 18*18 pixels
         Notification noti = new Notification.Builder(this)
         .setTicker("Vigtig vigtig")
         .setContentTitle("Husk der er Brøndby kamp")
